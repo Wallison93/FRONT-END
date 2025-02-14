@@ -1,0 +1,31 @@
+.slider-imagens {
+    width: 100%;
+    height: 500px; /* Ajuste conforme necessário */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.slider-imagens::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    animation: slider 10s infinite;
+}
+
+@keyframes slider {
+    0%, 33.33% {
+        background-image: url("../imagem/1.png");
+    }
+    33.34%, 66.66% {
+        background-image: url("../imagem/2.png");
+    }
+    66.67%, 100% {
+        background-image: url("../imagem/3.png");
+    }
+}
